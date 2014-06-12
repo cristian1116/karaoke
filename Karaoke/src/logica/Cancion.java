@@ -8,8 +8,17 @@ public class Cancion {
 	private int numeroLineaActual;
 	private String imagen;
 	private ArrayList<Cancion> letracancion;
-
 	
+	
+	
+	public Cancion(String nombre,String cancion,int duracion,int numerolinea){
+	super();
+	this.nombre=nombre;
+	this.duracion=duracion;
+	this.numeroLineaActual=numerolinea;
+	
+
+	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -41,10 +50,17 @@ public class Cancion {
 		this.letracancion = letracancion;
 	}
 	
+	@Override
+	 public String toString(){
+		 return nombre;
+		 
+	 }
 	
-	 
-	
-	
+	public String obtenerDuracion(){
+		int minutos = duracion/60;
+		int segundos= duracion%60;
+		return minutos+":"+segundos;
+	}
 	
 	
 
