@@ -2,66 +2,74 @@ package logica;
 
 import java.util.ArrayList;
 
-public class Cancion {
-	private String nombre;
-	private int  duracion;
-	private int numeroLineaActual;
-	private String imagen;
-	private ArrayList<Cancion> letracancion;
-	
-	
-	
-	public Cancion(String nombre,String cancion,int duracion,int numerolinea){
-	super();
-	this.nombre=nombre;
-	this.duracion=duracion;
-	this.numeroLineaActual=numerolinea;
-	
-
+ public class Cancion {
+	 
+	 private String nombre;
+	 private String autor ;
+	 private Genero genero ;
+	 private String ruta;
+	 private ArrayList<String> letra ;
+	 
+	 
+	public Cancion(String nombre, String autor, Genero genero, String ruta) {
+		super();
+		this.nombre = nombre;
+		this.autor = autor;
+		this.genero = genero;
+		this.ruta = ruta;
 	}
+
+
 	public String getNombre() {
 		return nombre;
 	}
+
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getDuracion() {
-		return duracion;
-	}
-	public void setDuracion(int duracion) {
-		this.duracion = duracion;
-	}
-	public int getNumeroLineaActual() {
-		return numeroLineaActual;
-	}
-	public void setNumeroLineaActual(int numeroLineaActual) {
-		this.numeroLineaActual = numeroLineaActual;
-	}
-	public String getImagen() {
-		return imagen;
-	}
-	public void setImagen(String imagen) {
-		this.imagen = imagen;
-	}
-	public ArrayList<Cancion> getLetracancion() {
-		return letracancion;
-	}
-	public void setLetracancion(ArrayList<Cancion> letracancion) {
-		this.letracancion = letracancion;
-	}
-	
-	@Override
-	 public String toString(){
-		 return nombre;
-		 
-	 }
-	
-	public String obtenerDuracion(){
-		int minutos = duracion/60;
-		int segundos= duracion%60;
-		return minutos+":"+segundos;
-	}
-	
-	
 
-}
+
+	public String getAutor() {
+		return autor;
+	}
+
+
+	public void setAutor(String autor) {
+		this.autor = autor;
+	}
+
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
+	}
+
+
+	public String getRuta() {
+		return ruta;
+	}
+
+
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
+	}
+
+
+	public ArrayList<String> getLetra() {
+		return letra;
+	}
+
+
+	public void setLetra(ArrayList<String> letra) {
+		this.letra = letra;
+	}
+	
+	
+	 
+	 
+ }
