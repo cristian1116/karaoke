@@ -3,6 +3,9 @@ package logica;
 import java.io.File;
 import java.util.ArrayList;
 
+import persistencia.ArchivoBinarioCancion;
+import persistencia.ArchivoPlano;
+
 	public class Karaoke {
 		
 		private ArrayList<Cancion> listaCanciones;
@@ -18,5 +21,9 @@ import java.util.ArrayList;
 		}
 	}
 	
-	
+	public void agregarCancion(String letra,Cancion nuevaCancion, String ruta){
+		ArchivoPlano.crearArchivoLetra(letra, ruta + "mp3");
+		listaCanciones.add(nuevaCancion);
+		ArchivoBinarioCancion.crearArchivoCancion(nuevaCancion, ruta + ".canc");
+	}
 }

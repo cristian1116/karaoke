@@ -1,10 +1,17 @@
 package logica;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
- public class Cancion {
+import persistencia.ArchivoPlano;
+
+ public class Cancion implements Serializable {
 	 
-	 private String nombre;
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String nombre;
 	 private String autor ;
 	 private Genero genero ;
 	 private String ruta;
@@ -69,7 +76,18 @@ import java.util.ArrayList;
 		this.letra = letra;
 	}
 	
+	@Override
+	public String toString() {
+		return nombre + " - " + autor;
+		
+		}
 	
+	 public void cargarLetra(){
+		 letra = ArchivoPlano.leerArchivoLetra(ruta + ".mp3");
+	 }
 	 
+	 public void limpiarLetra(){
+		 letra = null ;
+	 }
 	 
  }
