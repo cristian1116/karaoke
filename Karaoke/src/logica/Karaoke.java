@@ -12,7 +12,7 @@ import persistencia.ArchivoPlano;
 		
 	public Karaoke() {
 		listaCanciones = new ArrayList<>();
-		File carpeta = new File("");
+		File carpeta = new File("./");
 		String [] listaCanciones = carpeta.list();
 		for(String string :listaCanciones){
 			if(string.endsWith(".canc")){   // Comprueba si la cadena termina con el sufijo pasado como parámetro.

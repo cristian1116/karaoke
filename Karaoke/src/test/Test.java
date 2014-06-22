@@ -1,5 +1,6 @@
 package test;
 
+
 import presentacion.VentanaPrincipal;
 
 public class Test {
@@ -8,6 +9,8 @@ public class Test {
 		// TODO Auto-generated method stub
 		VentanaPrincipal ventanaPrincipal = new VentanaPrincipal();
 		ventanaPrincipal.setVisible(true);
+		
+		
 	}
 
 }
